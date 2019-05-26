@@ -88,7 +88,10 @@ def pure_sample_extraction(tree,X_train,Y_train,target_class,purity):
         
         if (ratio!=0 and  (ratio>=purity) ):
             generate_samples.append(X_train[i])
-            
+    
+    if not generate_samples:
+        print('\nIgnore error messages below, highest purity limit reached\n\n\n')
+
     generate_samples=np.array(generate_samples)
     
     return generate_samples
