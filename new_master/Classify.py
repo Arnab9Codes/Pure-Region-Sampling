@@ -32,7 +32,7 @@ def Classify(location_of_data,train_data_name,test_data_name,smote_or_not,purity
     
     if smote_or_not==True:
      
-        df=pd.read_csv(location_of_file+train_data_name)
+        df=pd.read_csv(location_of_data+train_data_name)
     
         data=np.array(df)
         
