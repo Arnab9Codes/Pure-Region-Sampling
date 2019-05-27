@@ -16,7 +16,7 @@ warnings.filterwarnings('ignore')
 
 #custom functions imported
 
-import SampleExtraction
+import SampleExtractionPurity
 import DecisionRules
 import TreePathDictionary
 import SampleGeneration
@@ -37,7 +37,7 @@ def Classify(location_of_data,train_data_name,test_data_name,smote_or_not,purity
         data=np.array(df)
         
         X=data[:,:data.shape[1]-1]
-        print(X.shape)
+        #print(X.shape)
         Y=data[:,data.shape[1]-1]
         
         test_data_X=test_data[:,:test_data.shape[1]-1]
@@ -97,8 +97,8 @@ def Classify(location_of_data,train_data_name,test_data_name,smote_or_not,purity
         balanced_X=np.concatenate((X,generated_samples[:,:generated_samples.shape[1]-1]),axis=0)
         balanced_Y=np.concatenate((Y,generated_samples[:,generated_samples.shape[1]-1]),axis=0)
         
-        print('balanced X:',balanced_X.shape)
-        print('balanced Y:',balanced_Y.shape)
+        #print('balanced X:',balanced_X.shape)
+        #print('balanced Y:',balanced_Y.shape)
     
         tree=DecisionTreeClassifier(random_state=9)
 
