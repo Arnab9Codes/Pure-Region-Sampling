@@ -19,7 +19,6 @@ warnings.filterwarnings('ignore')
 
 #custom functions imported below
 
-import SampleExtraction
 import SampleExtractionPurity
 import DecisionRules
 import TreePathDictionary
@@ -60,7 +59,7 @@ def OverSampling(location_of_data,train_data,purity):
     
     p_X_train=np.array(pure_samples_X_train)
     
-    print('p_X_train: ',p_X_train.shape)
+    #print('p_X_train: ',p_X_train.shape)
     
     dic=DecisionRules.Tree_path(best_tree,p_X_train)
     
