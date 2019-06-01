@@ -148,7 +148,7 @@ def Classify(location_of_data,train_data_name,test_data_name,smote_or_not,purity
         #--------------------------------------------------------------------------
 
         model=base_model(X.shape[1])
-        model.fit(X,Y,epochs=5,batch_size=4,verbose=False)
+        model.fit(X,Y,epochs=50,batch_size=4,verbose=False)
         
         pred_Y=model.predict(test_data_X)
         pred_Y=(pred_Y>0.5)
